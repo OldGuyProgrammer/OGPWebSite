@@ -1,0 +1,25 @@
+.menubar-container {
+  background-color: rgb(103, 64, 64);
+  color: beige;
+  height: 60px;
+  line-height: 50px;
+  display: flex;
+  gap: 10px;
+}
+
+span {
+  vertical-align: middle;
+  color: beige;
+  font-size: 2em;
+}
+
+.menu-item {
+  padding: 1px 20px;
+  vertical-align: middle;
+  color: rgb(205, 202, 246);
+  font-size: 1.5em;
+}
+
+.menu-item:hover {
+  color: rgb(256, 231, 204);
+}
