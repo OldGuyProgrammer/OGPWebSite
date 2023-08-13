@@ -9,6 +9,7 @@ import React from "react";
 import { useState } from "react";
 import MenuBar from "../../navigation/menubar/menubar.jsx";
 import "./contactus.css";
+import { postData } from "../../utilities/fetchFromServer.js";
 
 const defaultContactFields = {
   contactName: "",
@@ -22,14 +23,19 @@ export default function ContactUs() {
     contactEmail: "",
     contactMessage: ""
   });
+
   const { contactName, contactEmail, contactMessage } = formFields;
 
   const handleSubmit = (event) => {
     event.preventDefault();
     const now = new Date().toTimeString();
-    console.log(contactName);
-    console.log(contactEmail);
-    console.log(contactMessage);
+    const contactData = {
+      "eMailFrom": contactEmail,
+      "mailFromName": contactEmail,
+      "message": contactMessage
+    }
+    console.log(contactData);
+    postData(contactData)
     setFormFields(defaultContactFields);
   };
 

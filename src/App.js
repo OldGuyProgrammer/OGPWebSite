@@ -1,3 +1,9 @@
+//
+// OGP Web Site.
+//
+// Jim Olivi 2003
+//
+
 import { Routes, Route } from "react-router-dom";
 import About from "../src/components/about/about.jsx";
 import Home from "../src/components/home/home.jsx";
