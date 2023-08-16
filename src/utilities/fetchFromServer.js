@@ -4,18 +4,29 @@
 //
 // Jim Olivi 2023
 
-export async function postData(data) {
-  try {
-    const res = await fetch("http://localhost:3001/savecontact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-      },
-      body: new URLSearchParams(data),
+export function postData(data) {
+  fetch("http://localhost:3001/savecontact", {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/x-www-form-urlencoded",
+    },
+    body: new URLSearchParams(data),
+  })
+    .then((res) => {
+      if (res.status == 201) return;
+      else if (res.status >= 400 && res.status <= 499) {
+        const msg = `Send to the server failed\nStatus Code: ${res.status}, message ${res.statusText}`;
+        console.log(msg);
+        alert(msg);
+      } else {
+        const msg = `Send to the server failed\nStatus Code: ${res.status}, message ${res.statusText}`;
+        console.log(msg);
+        alert(msg);
+      }
+    })
+    .catch((error) => {
+      const msg = `Send to the server failed\nmessage ${error}`;
+      console.log(msg);
+      alert(msg);
     });
-    const result = await res.json();
-    console.log("success: ", result);
-  } catch (error) {
-    console.log("Send to savecontact failed.");
-  }
 }
