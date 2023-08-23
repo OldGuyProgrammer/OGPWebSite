@@ -1,24 +1,35 @@
-import "./menubar.css";
-import { Link } from "react-router-dom";
+//
+// OGP Web Site.
+// menubar component
+//
+// Jim Olivi 2003
+//
 
-export default function MenuBar() {
+import Nav from "react-bootstrap/Nav";
+import Navbar from "react-bootstrap/Navbar";
+import OGPLogo from "./OGPLogolink";
+import AboutLink from "./aboutlink";
+import ContactUsLink from "./contactuslink";
+import HomeLink from "./homelink";
+import "./menubar.scss";
+
+export default function MenuBar({ home = true, about = true, contact = true }) {
   return (
-    <div className="menubar-container">
-      <img
-        style={{ width: "5%" }}
-        src={require("../../assets/profile.png")}
-        alt="OGP Logo"
+    <Navbar expand="sm" className="navbar-dark menubar-container">
+      <Navbar.Brand>
+        <OGPLogo />
+      </Navbar.Brand>
+      <Navbar.Toggle
+        className="ms-auto"
+        aria-controls="responsive-navbar-nav"
       />
-      <span>Old Guy Programmer</span>
-      <Link to={"/"}>
-        <span className="menu-item">Home</span>
-      </Link>
-      <Link to={"/about"}>
-        <span className="menu-item">About</span>
-      </Link>
-      <Link to={"/contactus"}>
-        <span className="menu-item">Contact Us</span>
-      </Link>
-    </div>
+      <Navbar.Collapse id="responsive-navbar-nav">
+        <Nav className="ms-auto">
+          {home && <HomeLink />}
+          {about && <AboutLink />}
+          {contact && <ContactUsLink />}
+        </Nav>
+      </Navbar.Collapse>
+    </Navbar>
   );
 }

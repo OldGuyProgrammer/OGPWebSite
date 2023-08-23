@@ -22,10 +22,6 @@ button {
   font-size: 1vw;
 }
 
-.text-container {
-  justify-content: right;
-}
-
 .input-container {
   display: flex;
   justify-content: left;

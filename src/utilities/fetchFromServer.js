@@ -13,19 +13,17 @@ export function postData(data) {
     body: new URLSearchParams(data),
   })
     .then((res) => {
-      if (res.status == 201) return;
-      else if (res.status >= 400 && res.status <= 499) {
-        const msg = `Send to the server failed\nStatus Code: ${res.status}, message ${res.statusText}`;
-        console.log(msg);
-        alert(msg);
+      if (res.status == 201) {
+        alert("Message sent to the Old Guy Programmer support team.");
+        return;
       } else {
-        const msg = `Send to the server failed\nStatus Code: ${res.status}, message ${res.statusText}`;
+        const msg = `Send to the server failed\nStatus Code: ${res.status}, message: ${res.statusText}`;
         console.log(msg);
         alert(msg);
       }
     })
     .catch((error) => {
-      const msg = `Send to the server failed\nmessage ${error}`;
+      const msg = `Send to the server failed\nmessage: ${error}`;
       console.log(msg);
       alert(msg);
     });

@@ -14,14 +14,14 @@ import { postData } from "../../utilities/fetchFromServer.js";
 const defaultContactFields = {
   contactName: "",
   contactEmail: "",
-  contactMessage: ""
+  contactMessage: "",
 };
 
 export default function ContactUs() {
   const [formFields, setFormFields] = useState({
     contactName: "",
     contactEmail: "",
-    contactMessage: ""
+    contactMessage: "",
   });
 
   const { contactName, contactEmail, contactMessage } = formFields;
@@ -30,12 +30,12 @@ export default function ContactUs() {
     event.preventDefault();
     const now = new Date().toTimeString();
     const contactData = {
-      "eMailFrom": contactEmail,
-      "mailFromName": contactEmail,
-      "message": contactMessage
-    }
+      eMailFrom: contactEmail,
+      mailFromName: contactEmail,
+      message: contactMessage,
+    };
     console.log(contactData);
-    postData(contactData)
+    postData(contactData);
     setFormFields(defaultContactFields);
   };
 
@@ -46,7 +46,7 @@ export default function ContactUs() {
 
   return (
     <div className="whole_container">
-      <MenuBar />
+      <MenuBar contact={false} />
       <form onSubmit={handleSubmit} method="POST">
         <div className="contactus-container">
           <div className="text-container">Name:</div>

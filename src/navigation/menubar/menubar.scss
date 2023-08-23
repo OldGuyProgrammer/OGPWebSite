@@ -1,3 +1,7 @@
+@import "../../styles.scss";
+$enable-grid-classes: false;
+$enable-cssgrid: true;
+
 .menubar-container {
   background-color: rgb(103, 64, 64);
   color: beige;
@@ -5,18 +9,13 @@
   line-height: 50px;
   display: flex;
   gap: 10px;
-}
-
-span {
-  vertical-align: middle;
-  color: beige;
-  font-size: 2em;
+  font-family: $defaultFont;
 }
 
 .menu-item {
-  padding: 1px 20px;
   vertical-align: middle;
-  color: rgb(205, 202, 246);
+  padding: 1px 20px;
+  color: white;
   font-size: 1.5em;
 }
 
