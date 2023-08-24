@@ -9,14 +9,19 @@ import "../about/about.scss";
 
 export default function IntentProgrammer() {
   return (
-    <>
-      <div className="image-caption">Complete System Design</div>
-      <div className="image-caption">Supported Implementations</div>
+    <div className="about-image-caption">
+      <p align="right">
+        Complete System Design.
+        <br />
+        Supported Implementations
+      </p>
+      {/* <div className="about-images"> */}
       <img
-        className="image-fluid image-jim"
         src={require("../../assets/istockphoto-1147195672-612x612.jpg")}
         alt="Intent Programmer"
+        align="right"
       />
-    </>
+      {/* </div> */}
+    </div>
   );
 }

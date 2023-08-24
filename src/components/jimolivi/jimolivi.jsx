@@ -9,14 +9,19 @@ import "../about/about.scss";
 
 export default function JimOliviPortrait() {
   return (
-    <>
+    <div>
+      {/* <div className="about-images"> */}
       <img
-        className="image-responsive image-jim"
+        // className="about-images"
         src={require("../../assets/Jim_Olivi.jpeg")}
         alt="Jim Olivi"
       />
-      <div className="image-caption">Programming Experience</div>
-      <div className="image-caption">Professional Integrity</div>
-    </>
+      <p className="about-image-caption">
+        Programming Experience.
+        <br />
+        Professional Integrity.
+      </p>
+      {/* </div> */}
+    </div>
   );
 }

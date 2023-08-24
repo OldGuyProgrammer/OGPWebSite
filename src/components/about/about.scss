@@ -1,6 +1,8 @@
 @import "../../styles";
 
 .about-page-container {
+  height: 100vh;
+  padding: 20px;
   gap: 50px;
   background-color: $defaultBackgroundColor;
   font-family: $defaultFont;
@@ -8,9 +10,8 @@
   color: $highLightTextColor;
 
   display: grid;
-
-  grid-template-rows: auto auto auto;
-  grid-template-columns: auto auto;
+  // grid-template-rows: 30vh 30vh 30vh;
+  grid-template-columns: 1fr 1fr;
 }
 
 .about-container-3 {
@@ -23,7 +24,6 @@
 }
 
 .about-text-left {
-  display: flex;
   justify-content: left;
 }
 
@@ -37,17 +37,16 @@
   justify-content: right;
 }
 
-.image-jim {
-  display: flex;
-  maxWidth: 20%;
+img {
+  width: 30%;
+  height: auto;
 }
 
-.image-programmer {
-  display: flex;
-  maxWidth: 50%;
+.about-image-grid {
+  display:grid;
+  grid-template-rows: auto auto auto;
 }
 
-.image-caption {
-  font-size: 2vw;
-  gap: 10px;
+.about-image-caption {
+  font-size: 1em;
 }

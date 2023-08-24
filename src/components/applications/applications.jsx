@@ -10,8 +10,8 @@ import "../about/about.scss";
 export default function Applications() {
   return (
     <>
-      <div className="about-text-left">Business Systems</div>
-      <div className="about-text-left">Web Sites</div>
+      <p className="about-text-left">Business Systems</p>
+      <p className="about-text-right">Web Sites</p>
     </>
   );
 }
