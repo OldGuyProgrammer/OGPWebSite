@@ -1,6 +1,6 @@
 //
 // Old Guy Programmer
-//Commujnicate with Server
+//Communicate with Server
 //
 // Jim Olivi 2023
 
@@ -14,17 +14,19 @@ export function postData(data) {
   })
     .then((res) => {
       if (res.status == 201) {
-        alert("Message sent to the Old Guy Programmer support team.");
-        return;
+        const msg = `Send to the server succeeded\nStatus Code: ${res.status}`;
+        console.log(msg);
+        return 201;
       } else {
         const msg = `Send to the server failed\nStatus Code: ${res.status}, message: ${res.statusText}`;
+        console.log(res);
         console.log(msg);
-        alert(msg);
+        return res.status;
       }
     })
     .catch((error) => {
       const msg = `Send to the server failed\nmessage: ${error}`;
       console.log(msg);
-      alert(msg);
+      return error;
     });
 }

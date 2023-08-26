@@ -11,10 +11,9 @@ export default function Crypto() {
   return (
     <div>
       <img
-        className="image-fluid"
+        className="about-image-right"
         src={require("../../assets/Group_2.png")}
         alt="Crypto Image"
-        align="right"
       />
     </div>
   );

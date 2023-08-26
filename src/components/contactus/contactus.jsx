@@ -1,14 +1,14 @@
 //
 // Old Guy Programmer
 //
-// Company web site
+// Contact Us Component
 //
 // Jim Olivi 2023
 
 import React from "react";
 import { useState } from "react";
 import MenuBar from "../../navigation/menubar/menubar.jsx";
-import "./contactus.css";
+import "./contactus.scss";
 import { postData } from "../../utilities/fetchFromServer.js";
 
 const defaultContactFields = {
@@ -34,9 +34,16 @@ export default function ContactUs() {
       mailFromName: contactEmail,
       message: contactMessage,
     };
-    console.log(contactData);
-    postData(contactData);
-    setFormFields(defaultContactFields);
+    // console.log(contactData);
+    const ret = postData(contactData);
+    console.log(`Return from sender: ${ret}`);
+    if (ret == 201) {
+      window.location = "/sendsuccess";
+    } else {
+      window.location = "/fatalerror";
+    }
+
+    // setFormFields(defaultContactFields);
   };
 
   const handleChange = (event) => {
@@ -45,7 +52,7 @@ export default function ContactUs() {
   };
 
   return (
-    <div className="whole_container">
+    <>
       <MenuBar contact={false} />
       <form onSubmit={handleSubmit} method="POST">
         <div className="contactus-container">
@@ -56,7 +63,7 @@ export default function ContactUs() {
               name="contactName"
               value={contactName}
               onChange={handleChange}
-              placeholder="Enter Your Name"
+              placeholder="Enter Your Full Name"
             />
           </div>
           <div className="text-container">Email Address:</div>
@@ -78,9 +85,11 @@ export default function ContactUs() {
               onChange={handleChange}
             />
           </div>
-          <button type="submit">Submit</button>
+          <button className="contactus-button" type="submit">
+            Submit
+          </button>
         </div>
       </form>
-    </div>
+    </>
   );
 }

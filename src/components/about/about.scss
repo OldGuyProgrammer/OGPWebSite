@@ -1,35 +1,25 @@
 @import "../../styles";
 
-.about-page-container {
-  height: 100vh;
-  padding: 20px;
-  gap: 50px;
+.about-basic {
+  padding: 10px;
   background-color: $defaultBackgroundColor;
   font-family: $defaultFont;
   font-size: 2.5vw;
   color: $highLightTextColor;
+}
+
+.about-page-container {
+  @extend .about-basic;
 
   display: grid;
-  // grid-template-rows: 30vh 30vh 30vh;
   grid-template-columns: 1fr 1fr;
 }
 
-.about-container-3 {
-  padding: 50px;
+.about-languages-grid {
+  @extend .about-basic;
+  
   display: grid;
-  font-family: $defaultFont;
-  background-color: $defaultBackgroundColor;
-  font-size: 2.5vw;
   grid-template-columns: 1fr 1fr 1fr;
-}
-
-.about-text-left {
-  justify-content: left;
-}
-
-.about-text-center {
-  display: flex;
-  justify-content: center;
 }
 
 .about-text-right {
@@ -37,16 +27,21 @@
   justify-content: right;
 }
 
+.about-text-center {
+  display: flex;
+  justify-content: center;
+}
+
 img {
   width: 30%;
   height: auto;
 }
 
-.about-image-grid {
-  display:grid;
-  grid-template-rows: auto auto auto;
-}
-
 .about-image-caption {
   font-size: 1em;
+}
+
+.about-image-right {
+  display: flex;
+  float: right;
 }

@@ -14,11 +14,14 @@ button {
   height: 100vh;
 }
 
+.contactus-button {
+  justify-content: center;
+}
+
 .contactus-container {
   display: grid;
   gap: 0.5rem;
   grid-template-columns: auto minmax(100px, 700px);
-  grid-template-rows: 30px 30px 60px 25px;
   font-size: 1vw;
 }
 

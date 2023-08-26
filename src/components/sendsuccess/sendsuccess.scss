@@ -1,0 +1,11 @@
+@import "../../styles";
+
+.send-success-basic {
+    padding: 10px;
+    font-family: $defaultFont;
+    font-size: 2vw;
+    color: $highLightTextColor;
+
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}

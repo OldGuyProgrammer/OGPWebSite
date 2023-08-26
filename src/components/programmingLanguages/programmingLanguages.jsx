@@ -9,10 +9,10 @@ import "../about/about.scss";
 
 export default function ProgrammingLanguages() {
   return (
-    <>
-      <div className="about-text-left">React</div>
-      <div className="about-text-left">Python</div>
-      <div className="about-text-left">JavaScript</div>
-    </>
+    <div className="about-languages-grid">
+      <p>React</p>
+      <p className="about-text-center">Python</p>
+      <p className="about-text-right">JavaScript</p>
+    </div>
   );
 }

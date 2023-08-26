@@ -1,5 +1,12 @@
+//
+// Old Guy Programmer
+//
+// About Screen
+//
+// Jim Olivi 2023
+
 import MenuBar from "../../navigation/menubar/menubar.jsx";
-import JimOliviPortrait from "../jimolivi/jimolivi.jsx";
+import JimOliviPortrait from "../jimolivi/jimoliviportrait.jsx";
 import IntentProgrammer from "../intentprogrammer/intentprogrammer.jsx";
 import Applications from "../applications/applications.jsx";
 import "./about.scss";
@@ -17,6 +24,8 @@ export default function About() {
         <Applications />
         <InternetSecurity />
         <Crypto />
+      </div>
+      <div className="container-fluid">
         <ProgrammingLanguages />
       </div>
     </>
