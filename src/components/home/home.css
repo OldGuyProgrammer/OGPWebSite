@@ -4,7 +4,8 @@
   font-family: "EB Garamond";
   background-repeat: no-repeat;
   background-size: auto;
-}
+  background-image: url('../../assets/wp2823565-tech-wallpaper.jpg')
+  }
 
 .home-screen-grid {
   display: flex;
@@ -16,14 +17,9 @@
   height: auto;
 }
 
-.text-center {
-  justify-content: center;
-  text-align: center;
-}
-
 .home-text-container {
   display: flex;
-  font-size: 1em;
+  font-size: 2em;
   gap: 10px;
   color: beige;
 }

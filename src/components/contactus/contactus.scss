@@ -1,33 +1,62 @@
+@import "../../styles";
+
 form {
-  padding: 10px;
   display: flex;
   align-items: center;
   justify-content: center;
-  border: 2px solid brown;
 }
 
-button {
-  text-align: center;
+label {
+  font-size: 20px
 }
 
-.whole_container {
+.screen-container {
+  @extend .about-basic;
+
   height: 100vh;
 }
 
-.contactus-button {
-  justify-content: center;
+.text-header {
+  text-align: center;
+  font-size: 4vw;
+  @media (min-width: 900px) {
+    font-size: 3vw;
+  }
 }
 
-.contactus-container {
-  display: grid;
+.greeting-text {
+  width: 100%;
+  font-family: $defaultFont;
+  color: highLightTextColor;
+  background-repeat: no-repeat;
+  text-align: center;
+  font-size: 2vw;
+}
+
+.contactus-button {
+  background-color: $highLightTextColor;
+  color: $defaultBackgroundColor;
+}
+
+.card-container {
+  @media (min-width: 900px) {
+    padding: 1px 50px;
+  }
   gap: 0.5rem;
-  grid-template-columns: auto minmax(100px, 700px);
   font-size: 1vw;
 }
 
 .input-container {
-  display: flex;
-  justify-content: left;
+  @media screen and (min-width: 900px) {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    gap: 0.5rem
+  }
+}
+
+.text-container {
+text-align: right;
+font-size: 20px
 }
 
 input,

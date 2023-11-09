@@ -10,6 +10,7 @@ import Home from "../src/components/home/home.jsx";
 import ContactUs from "./components/contactus/contactus.jsx";
 import SendSuccess from "./components/sendsuccess/sendSuccess.jsx";
 import FatalError from "./components/fatalerror/fatalError.jsx";
+import "./styles.scss";
 
 export default function App() {
   return (

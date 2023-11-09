@@ -3,9 +3,11 @@
 .send-success-basic {
     padding: 10px;
     font-family: $defaultFont;
-    font-size: 2vw;
+    font-size: 20px;
     color: $highLightTextColor;
-
-    display: grid;
-    grid-template-columns: 1fr 2fr;
+    @media screen and (min-width: 900px) {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        font-size:2vw
+    }
 }

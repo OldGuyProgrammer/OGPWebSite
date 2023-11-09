@@ -11,7 +11,7 @@ import "../about/about.scss";
 export default function JimOliviPortraitCaptions() {
   return (
     <div>
-      <p className="about-image-caption">
+      <p className="image-caption">
         Programming Experience.
         <br />
         Professional Integrity.

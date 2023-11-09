@@ -21,7 +21,9 @@ export default function SendSuccess() {
           </p>
           <p>If you don't get a response soon, please contact us again.</p>
         </div>
-        <JimOliviPhoto />
+        <div className="d-none d-md-block d-lg-block d-xl-block">
+          <JimOliviPhoto />
+        </div>
       </div>
     </>
   );

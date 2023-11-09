@@ -1,20 +1,5 @@
 @import "../../styles";
 
-.about-basic {
-  padding: 10px;
-  background-color: $defaultBackgroundColor;
-  font-family: $defaultFont;
-  font-size: 2.5vw;
-  color: $highLightTextColor;
-}
-
-.about-page-container {
-  @extend .about-basic;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 .about-languages-grid {
   @extend .about-basic;
   
@@ -35,10 +20,6 @@
 img {
   width: 30%;
   height: auto;
-}
-
-.about-image-caption {
-  font-size: 1em;
 }
 
 .about-image-right {

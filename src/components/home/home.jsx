@@ -7,10 +7,7 @@ export default function Home() {
   return (
     <>
       <MenuBar home={false} />
-      <div
-        style={{ backgroundImage: `url(${background})` }}
-        className="home-screen-container"
-      >
+      <div className="home-screen-container">
         <div className="home-screen-grid">
           <img
             className="logo-image"
@@ -20,16 +17,10 @@ export default function Home() {
           />
           <div>
             <span className="text-center home-text-container">
-              Old Guy Programmer
-            </span>
-            <span className="text-center home-text-container">
               Professional IT Developement
             </span>
             <span className="text-center home-text-container">
               Professional IT Support
-            </span>
-            <span className="text-center home-text-container smaller-text ">
-              Tap the About menu item to see our portfolio.
             </span>
           </div>
         </div>

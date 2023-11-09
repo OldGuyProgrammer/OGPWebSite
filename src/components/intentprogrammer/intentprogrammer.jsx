@@ -17,7 +17,8 @@ export default function IntentProgrammer() {
       </p>
       <img
         className="about-image-right"
-        src={require("../../assets/istockphoto-1147195672-612x612.jpg")}
+        src={require("../jimolivi/Jim_At_Computer_back.png")}
+        // src={require("../../assets/istockphoto-1147195672-612x612.jpg")}
         alt="Intent Programmer"
       />
     </div>

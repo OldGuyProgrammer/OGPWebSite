@@ -18,7 +18,7 @@ export default function About() {
   return (
     <>
       <MenuBar about={false} />
-      <div className="container-fluid about-page-container">
+      <div className="container-fluid page-container">
         <JimOliviPortrait />
         <IntentProgrammer />
         <Applications />
