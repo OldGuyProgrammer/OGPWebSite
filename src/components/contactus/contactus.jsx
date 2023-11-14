@@ -41,8 +41,8 @@ export default function ContactUs() {
     };
     console.log(contactData);
     try {
-      // const url = process.env.REACT_APP_OGP_SERVER_URL;
-      const url = "http://localhost:3010/savecontact";
+      const url = process.env.REACT_APP_OGP_SERVER_URL;
+      // const url = "http://localhost:3010/savecontact";
       console.log(url);
       const response = await fetch(url, {
         method: "POST",
