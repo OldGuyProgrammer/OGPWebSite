@@ -1,3 +1,9 @@
+//
+// Old Guy Programmer
+// About Us Website
+//
+// Jim Olivi 2024
+
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";

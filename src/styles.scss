@@ -14,13 +14,6 @@ $highLightTextColor: rgb(138,51,36);
   color: $highLightTextColor;
 }
 
-.page-container {
-  @extend .about-basic;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 .text-left {
   font-family: $defaultFont;
   justify-content: left;

@@ -12,8 +12,8 @@ export default function Home() {
           <img
             className="logo-image"
             style={{ maxWidth: "25%" }}
-            src={require("../../assets/default.png")}
-            alt="Jim Olivi"
+            src={require("../../assets/OGP-Logo.png")}
+            alt="OGP Logo"
           />
           <div>
             <span className="text-center home-text-container">

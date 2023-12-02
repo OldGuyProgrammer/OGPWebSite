@@ -24,9 +24,7 @@ export default function About() {
         <Applications />
         <InternetSecurity />
         <Crypto />
-      </div>
-      <div className="container-fluid">
-        <ProgrammingLanguages />
+        {/* <ProgrammingLanguages /> */}
       </div>
     </>
   );

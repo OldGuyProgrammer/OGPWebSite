@@ -9,7 +9,6 @@ import React from "react";
 import { useState } from "react";
 import MenuBar from "../../navigation/menubar/menubar.jsx";
 import JimOliviPhoto from "../jimolivi/jimoliviphoto.jsx";
-import Button from "react-bootstrap/Button";
 import "./contactus.scss";
 
 const defaultContactFields = {
@@ -30,8 +29,12 @@ export default function ContactUs() {
   const { contactName, contactCompany, contactEmail, contactMessage } =
     formFields;
 
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormFields((prevValue) => ({ ...prevValue, [name]: value }));
+  };
+
   const handleSubmit = async (event) => {
-    console.log("In handle submit, sending data to server.");
     event.preventDefault();
     const contactData = {
       eMailFrom: contactEmail,
@@ -39,11 +42,10 @@ export default function ContactUs() {
       contactCompany: contactCompany,
       message: contactMessage,
     };
-    console.log(contactData);
+
     try {
       const url = process.env.REACT_APP_OGP_SERVER_URL;
-      // const url = "http://localhost:3010/savecontact";
-      console.log(url);
+      // const url = "http://localhost:3000/savecontact";
       const response = await fetch(url, {
         method: "POST",
         mode: "cors",
@@ -83,11 +85,6 @@ export default function ContactUs() {
     }
   };
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
-    setFormFields((prevValue) => ({ ...prevValue, [name]: value }));
-  };
-
   return (
     <>
       <MenuBar contact={false} />
@@ -104,7 +101,7 @@ export default function ContactUs() {
         <form onSubmit={handleSubmit} method="POST">
           <div className="input-container">
             <div className="card-container">
-              <label for="contactName">Name:</label>
+              <label htmlFor="contactName">Name:</label>
               <input
                 className="form-control"
                 type="text"
@@ -113,7 +110,7 @@ export default function ContactUs() {
                 onChange={handleChange}
                 placeholder="Enter Your Full Name"
               />
-              <label for="contactCompany">Company Name:</label>
+              <label htmlFor="contactCompany">Company Name:</label>
               <input
                 className="form-control"
                 type="text"
@@ -122,7 +119,7 @@ export default function ContactUs() {
                 onChange={handleChange}
                 placeholder="Enter Your Company Name"
               />
-              <label for="contactEmail">Email Address:</label>
+              <label htmlFor="contactEmail">Email Address:</label>
               <input
                 className="form-control"
                 type="email"
@@ -131,7 +128,7 @@ export default function ContactUs() {
                 onChange={handleChange}
                 placeholder="Enter Your Email Address"
               />
-              <label for="contactMessage">Message:</label>
+              <label htmlFor="contactMessage">Message:</label>
               <textarea
                 className="form-control"
                 rows="5"
