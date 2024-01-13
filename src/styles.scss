@@ -1,6 +1,6 @@
 $defaultFont: Gideon Roman;
 $defaultBackgroundColor: beige;
-$highLightTextColor: rgb(138,51,36);
+$highLightTextColor: rgb(138, 51, 36);
 
 .text-center {
   justify-content: center;
@@ -14,18 +14,11 @@ $highLightTextColor: rgb(138,51,36);
   color: $highLightTextColor;
 }
 
-.page-container {
-  @extend .about-basic;
-
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-}
-
 .text-left {
   font-family: $defaultFont;
   justify-content: left;
-  text-align:left;
-  font-size: 20px
+  text-align: left;
+  font-size: 20px;
 }
 
 .text-x2 {

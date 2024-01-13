@@ -1,6 +1,13 @@
+//
+// OGP Web Site.
+//
+// Jim Olivi 2024
+//
+
 import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
+import Footer from '../src/components/footer/footer';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import App from "./App";
@@ -13,5 +20,6 @@ root.render(
     <BrowserRouter>
       <App />
     </BrowserRouter>
+    <Footer />
   </StrictMode>
 );

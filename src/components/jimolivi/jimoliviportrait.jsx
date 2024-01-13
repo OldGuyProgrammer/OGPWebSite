@@ -2,7 +2,7 @@
 // OGP Web Site.
 // JimOLivi Portrait with Captions component
 //
-// Jim Olivi 2003
+// Jim Olivi 2023
 //
 
 import "../about/about.scss";

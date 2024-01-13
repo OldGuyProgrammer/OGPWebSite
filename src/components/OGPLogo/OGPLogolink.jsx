@@ -2,7 +2,7 @@
 // OGP Web Site.
 // OGPLogo Live Compnent component
 //
-// Jim Olivi 2003
+// Jim Olivi 2023
 //
 
 import { Link } from "react-router-dom";

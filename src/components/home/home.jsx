@@ -1,3 +1,9 @@
+//
+// OGP Web Site.
+//
+// Jim Olivi 2023
+//
+
 import React from "react";
 import MenuBar from "../../navigation/menubar/menubar.jsx";
 import "./home.css";

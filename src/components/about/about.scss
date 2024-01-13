@@ -2,7 +2,7 @@
 
 .about-languages-grid {
   @extend .about-basic;
-  
+
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
 }
@@ -25,4 +25,11 @@ img {
 .about-image-right {
   display: flex;
   float: right;
+}
+
+.page-container {
+  @extend .about-basic;
+
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
