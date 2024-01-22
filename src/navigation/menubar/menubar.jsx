@@ -12,14 +12,15 @@ import "./menubar.scss";
 
 export default function MenuBar({ home = true, about = true, contact = true }) {
   return (
-    <>
-      <Navbar expand="lg" className="navbar-dark menubar-container">
+    <div className="menubar-container menu-item">
+      <Navbar expand="lg" className="navbar-dark">
         <OGPLogo />
         <Navbar.Toggle aria-controls="basic-navbar-nav" />
         <Navbar.Collapse id="basic-navbar-nav">
           <MenuItems home={home} about={about} contact={contact} />
         </Navbar.Collapse>
       </Navbar>
-    </>
+      <div id="portfolio-help">Tap Portfolio to see other work we've done.</div>
+    </div>
   );
 }

@@ -6,10 +6,8 @@
 //
 
 import Nav from "react-bootstrap/Nav";
-// import AboutLink from "./aboutlink";
-// import ContactUsLink from "./contactuslink";
-// import HomeLink from "./homelink";
 import "./menubar.scss";
+import { Dropdown, DropdownButton } from "react-bootstrap";
 
 export default function MenuItems({
   home = true,
@@ -22,6 +20,9 @@ export default function MenuItems({
         {home && <Nav.Link href="/">Home</Nav.Link>}
         {about && <Nav.Link href="/about">About</Nav.Link>}
         {contact && <Nav.Link href="/contactus">Contact Us</Nav.Link>}
+        <DropdownButton title="Portfolio" size="lg" variant="secondary">
+          <Dropdown.Item href="#/airportinfo">Airport Info</Dropdown.Item>
+        </DropdownButton>
       </Nav>
     </>
   );

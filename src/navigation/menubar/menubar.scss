@@ -9,6 +9,11 @@ $enable-cssgrid: true;
   display: flex;
   gap: 10px;
   font-family: $defaultFont;
+  text-align: left;
+}
+
+#portfolio-help {
+  display: none;
 }
 
 .menu-item {
@@ -16,15 +21,19 @@ $enable-cssgrid: true;
   padding: 1px 20px;
   font-size: 1.5em;
   color: $defaultBackgroundColor;
+
+  &:hover {
+    color: rgb(256, 231, 204);
+
+    #portfolio-help {
+      display: block;
+    }
+  }
 }
 
 // Override Bootstrap Color
 .nav-link {
   color: $defaultBackgroundColor;
-}
-
-.menu-item:hover {
-  color: rgb(256, 231, 204);
 }
 
 * {
@@ -34,4 +43,7 @@ $enable-cssgrid: true;
 #page-wrap {
   padding-bottom: 10px;
   padding-top: 10px;
+}
+
+.menu-container {
 }
