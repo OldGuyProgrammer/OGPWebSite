@@ -11,6 +11,7 @@ import Footer from '../src/components/footer/footer';
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import App from "./App";
+import { AirportProvider } from "./context/airport.context";
 
 const rootElement = document.getElementById("root");
 const root = createRoot(rootElement);
@@ -18,7 +19,9 @@ const root = createRoot(rootElement);
 root.render(
   <StrictMode>
     <BrowserRouter>
-      <App />
+      <AirportProvider>
+        <App />
+      </AirportProvider>
     </BrowserRouter>
     <Footer />
   </StrictMode>

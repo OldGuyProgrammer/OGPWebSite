@@ -21,7 +21,7 @@ export default function MenuItems({
         {about && <Nav.Link href="/about">About</Nav.Link>}
         {contact && <Nav.Link href="/contactus">Contact Us</Nav.Link>}
         <DropdownButton title="Portfolio" size="lg" variant="secondary">
-          <Dropdown.Item href="#/airportinfo">Airport Info</Dropdown.Item>
+          <Dropdown.Item href="/airportdisplay">Airport Info</Dropdown.Item>
         </DropdownButton>
       </Nav>
     </>

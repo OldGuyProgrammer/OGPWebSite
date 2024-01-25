@@ -1,0 +1,16 @@
+//
+// Airport Info
+//
+// Airport input scss
+//
+// Jim Olivi 2024
+
+.input-box {
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+}
+
+input {
+  margin: 0.5rem;
+}

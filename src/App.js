@@ -9,6 +9,7 @@ import About from "../src/components/about/about.jsx";
 import Home from "../src/components/home/home.jsx";
 import ContactUs from "./components/contactus/contactus.jsx";
 import SendSuccess from "./components/sendsuccess/sendSuccess.jsx";
+import AirPortDisplay from "./components/airportdisplay/airportdisplay.jsx";
 import FatalError from "./components/fatalerror/fatalError.jsx";
 import "./styles.scss";
 
@@ -18,6 +19,7 @@ export default function App() {
       <Route index path="/" element={<Home />} />
       <Route path="/about" element={<About />} />
       <Route path="/contactus" element={<ContactUs />} />
+      <Route path="/airportdisplay" element={<AirPortDisplay />} />
       <Route path="/sendsuccess" element={<SendSuccess />} />
       <Route path="/fatalerror" element={<FatalError />} />
     </Routes>

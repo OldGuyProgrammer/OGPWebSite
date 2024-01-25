@@ -1,0 +1,18 @@
+//
+// Airport Info
+//
+// Runway display scss
+//
+// Jim Olivi 2024
+
+.runway-display {
+  max-width: 50em;
+  grid-column: 2;
+}
+
+.runway-columns {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  align-items: center;
+  margin: auto;
+}

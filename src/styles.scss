@@ -7,6 +7,17 @@ $highLightTextColor: rgb(138, 51, 36);
   text-align: center;
 }
 
+.app-display-container {
+  font-family: $defaultFont;
+  background-color: $defaultBackgroundColor;
+  height: 100vh;
+  @media only screen and (min-width: 960px) {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 2fr 2fr;
+  }
+}
+
 .about-basic {
   background-color: $defaultBackgroundColor;
   font-family: $defaultFont;

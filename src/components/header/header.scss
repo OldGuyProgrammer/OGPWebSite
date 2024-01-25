@@ -1,0 +1,44 @@
+//
+// Airport Info
+//
+// header component scss
+//
+// Jim Olivi 2024
+
+@import "../../mixin";
+
+.header-container {
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+}
+
+.logo-image {
+  height: auto;
+  max-width: 100px;
+  @media only screen and (max-width: 960px) {
+    display: none;
+  }
+}
+
+.airplane-image {
+  @include airplane-image;
+}
+
+.logo-container {
+  #copyright-text {
+    display: none;
+  }
+
+  &:hover {
+    #copyright-text {
+      display: block;
+    }
+  }
+}
+
+.title-text {
+  @media only screen and (max-width: 960px) {
+    font-size: 150%;
+  }
+}

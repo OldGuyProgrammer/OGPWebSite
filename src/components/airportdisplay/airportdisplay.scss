@@ -1,0 +1,55 @@
+//
+// Airport Info
+//
+// Airport display scss
+//
+// Jim Olivi 2024
+
+@import "../../styles.scss";
+@import "../../mixin.scss";
+
+.airport-display-container {
+  font-family: $defaultFont;
+  background-color: rgb(195, 228, 240);
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: auto;
+  @media only screen and (min-width: 960px) {
+    display: grid;
+    gap: 1em;
+    grid-template-columns: 1fr 2fr 2fr;
+  }
+}
+
+.airport-code-prompt {
+  // font-size: 150%;
+  #airport-code-help {
+    display: none;
+  }
+
+  &:hover {
+    #airport-code-help {
+      display: block;
+    }
+  }
+}
+
+input {
+  max-width: 5rem;
+  max-height: 25px;
+}
+
+.airport-display-button {
+  padding: 0 0 0 0;
+}
+
+.airplane-image-left {
+  @include airplane-image;
+  grid-column: 1;
+}
+
+.airplane-image-right {
+  @include airplane-image;
+  grid-column: 3;
+}

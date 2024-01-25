@@ -1,0 +1,13 @@
+// Airport Info
+
+// SCSS mixins
+
+// Jim Olivi 2024
+
+@mixin airplane-image {
+  height: auto;
+  max-width: 200px;
+  @media only screen and (max-width: 960px) {
+    display: none;
+  }
+}
