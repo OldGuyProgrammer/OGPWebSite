@@ -31,7 +31,7 @@ export default function ContactUs() {
     formFields;
 
   const handleSubmit = async (event) => {
-    console.log("In handle submit, sending data to server.");
+    // console.log("In handle submit, sending data to server.");
     event.preventDefault();
     const contactData = {
       eMailFrom: contactEmail,
@@ -39,7 +39,7 @@ export default function ContactUs() {
       contactCompany: contactCompany,
       message: contactMessage,
     };
-    console.log(contactData);
+    // console.log(contactData);
     try {
       const url = process.env.REACT_APP_OGP_SERVER_URL;
       // const url = "http://localhost:3010/savecontact";

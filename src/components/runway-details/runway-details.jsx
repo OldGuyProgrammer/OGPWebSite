@@ -13,7 +13,7 @@ import "./runway-details.scss";
 
 const RunwayDetails = () => {
   const { airport } = useContext(AirportContext);
-  console.log("In Runway Details");
+  // console.log("In Runway Details");
 
   return (
     <>

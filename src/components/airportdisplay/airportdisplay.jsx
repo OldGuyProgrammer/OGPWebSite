@@ -15,9 +15,9 @@ import AirportInput from "../airport-input/airport-input";
 import Header from "../header/header";
 
 const AirPortDisplay = () => {
-  console.log("In AirportDisplay");
+  // console.log("In AirportDisplay");
   const { airport } = useContext(AirportContext);
-  console.log("Airport context: " + airport);
+  // console.log("Airport context: " + airport);
   return (
     <>
       <div className="airport-display-container">

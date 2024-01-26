@@ -21,12 +21,12 @@ const AirportInput = () => {
     setAirportCode(event.target.value);
   };
 
-  console.log("Airport Input");
+  // console.log("Airport Input");
   const { airport, setAirport } = useContext(AirportContext);
   // When the user changes the desired airport, The get airport API call should fire.
   // The page will render and display airport information.
   const handleClick = async (event) => {
-    console.log("handle Click");
+    // console.log("handle Click");
     event.preventDefault();
     setShowSpinner(true);
     const url = process.env.REACT_APP_URL;
@@ -35,13 +35,12 @@ const AirportInput = () => {
       "<API_TOKEN>",
       process.env.REACT_APP_API_TOKEN
     );
-    // const url = `https://airportdb.io/api/v1/airport/${airportCode}?apiToken=fefa11b44cccdb08c7d39bf2de098e14dce6adeff001f23df963f8cf02c9b9e55e7f926ed7d89a3eb93125c2910c530f`;
-    console.log(urlToSend);
+    // console.log(urlToSend);
     try {
       const res = await fetch(urlToSend);
       if (res.status == 200) {
         const newAirport = await res.json();
-        console.log(newAirport);
+        // console.log(newAirport);
         setAirport(newAirport);
       } else if (res.status == 404) {
         const msg = "Invalid airport code: " + airportCode;
