@@ -31,8 +31,17 @@ $enable-cssgrid: true;
   }
 }
 
-// Override Bootstrap Color
+// Override Bootstrap Specs
 .nav-link {
+  color: $defaultBackgroundColor;
+}
+
+.dropdown-menu {
+  padding: 0;
+}
+
+.dropdown-item {
+  background-color: rgb(103, 64, 64);
   color: $defaultBackgroundColor;
 }
 

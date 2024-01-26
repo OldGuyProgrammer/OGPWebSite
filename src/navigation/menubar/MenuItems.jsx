@@ -5,9 +5,15 @@
 // Jim Olivi 2023
 //
 
-import Nav from "react-bootstrap/Nav";
+import React from "react";
+import {
+  Nav,
+  Button,
+  Dropdown,
+  DropdownButton,
+  NavDropdown,
+} from "react-bootstrap";
 import "./menubar.scss";
-import { Dropdown, DropdownButton } from "react-bootstrap";
 
 export default function MenuItems({
   home = true,
@@ -20,9 +26,11 @@ export default function MenuItems({
         {home && <Nav.Link href="/">Home</Nav.Link>}
         {about && <Nav.Link href="/about">About</Nav.Link>}
         {contact && <Nav.Link href="/contactus">Contact Us</Nav.Link>}
-        <DropdownButton title="Portfolio" size="lg" variant="secondary">
-          <Dropdown.Item href="/airportdisplay">Airport Info</Dropdown.Item>
-        </DropdownButton>
+        <NavDropdown title="Portfolio" id="basic-nav-dropdown">
+          <NavDropdown.Item href="/airportdisplay" className="">
+            Airport Info
+          </NavDropdown.Item>
+        </NavDropdown>
       </Nav>
     </>
   );
