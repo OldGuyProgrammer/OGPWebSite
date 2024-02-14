@@ -22,7 +22,7 @@ root.render(
       <AirportProvider>
         <App />
       </AirportProvider>
+      <Footer />
     </BrowserRouter>
-    <Footer />
   </StrictMode>
 );

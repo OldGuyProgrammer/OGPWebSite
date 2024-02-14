@@ -25,7 +25,7 @@ const Header = () => {
             Display information about most airports. Old Guy Programmer
             Development Company
           </p>
-          <p> © Copyright Old Guy Programmer {new Date().getFullYear()}</p>
+          <p>Copyright Old Guy Programmer ©{new Date().getFullYear()}</p>
         </span>
       </div>
       <h1 className="title-text">Airport Info</h1>
