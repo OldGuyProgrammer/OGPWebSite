@@ -27,12 +27,12 @@
 
 .logo-container {
   #copyright-text {
-    display: none;
+    visibility: hidden;
   }
 
   &:hover {
     #copyright-text {
-      display: block;
+      visibility: visible;
     }
   }
 }

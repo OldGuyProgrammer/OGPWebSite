@@ -11,7 +11,7 @@
 .airport-display-container {
   font-family: $defaultFont;
   background-color: rgb(195, 228, 240);
-  height: 100vh;
+  height: auto;
   justify-content: center;
   align-items: center;
   margin: auto;
@@ -25,12 +25,12 @@
 .airport-code-prompt {
   // font-size: 150%;
   #airport-code-help {
-    display: none;
+    visibility: hidden;
   }
 
   &:hover {
     #airport-code-help {
-      display: block;
+      visibility: visible;
     }
   }
 }
