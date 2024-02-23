@@ -23,7 +23,6 @@ const AirPortDisplay = () => {
       <div className="airport-display-container">
         <Header />
         <AirportInput />
-        {/* <RunwayDetails /> */}
         {airport && <RunwayDetails />}
       </div>
     </>

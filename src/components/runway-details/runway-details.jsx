@@ -29,11 +29,12 @@ const RunwayDetails = () => {
           </div>
           <div>
             <h3>Frequencies</h3>
-            {airport.freqs.map(({ id, type, frequency_mhz }) => (
-              <div key={id}>
-                {type} mhz:{frequency_mhz}
-              </div>
-            ))}
+            {airport.freqs &&
+              airport.freqs.map(({ id, type, frequency_mhz }) => (
+                <div key={id}>
+                  {type} mhz:{frequency_mhz}
+                </div>
+              ))}
           </div>
         </div>
       </div>
